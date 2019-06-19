@@ -1,0 +1,26 @@
+<div class="container" style="margin-left: 20%; margin-top: 5%">
+  <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Logout!</h3>
+      </div>
+        <div class="panel-body">
+          <div class="row" *ngIf="status">
+            <div class=" col-md-9 col-lg-9 " *ngIf="response.status === 'SUCCESS'"> 
+              <p>Thank you {{credentials.firstname + " " + credentials.lastname}}, you 're successfully logged out</p>
+              <button (click)="goToHomePage()" class="btn btn-primary">Go to Home page</button>
+            </div>
+            <div class=" col-md-9 col-lg-9 " *ngIf="response.status !== 'SUCCESS'"> 
+              <p>Oops!, we could not process your logout request</p>
+              <button (click)="processLogout" class="btn btn-primary">Try again to logout</button>
+            </div>
+          </div>
+          <div class="row" *ngIf="!status">
+              Loading...
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    background: url(http://mymaplist.com/img/parallax/back.png);
+	background-color: #444;
+    background: url(http://mymaplist.com/img/parallax/pinlayer2.png),url(http://mymaplist.com/img/parallax/pinlayer1.png),url(http://mymaplist.com/img/parallax/back.png);    
+}
+
+.vertical-offset-100{
+    padding-top:100px;
+}
+
+.user-row {
+    margin-bottom: 14px;
+}
+
+.user-row:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-user {
+    margin: 13px 0;
+    padding: 5px;
+    height: 100%;
+}
+
+.dropdown-user:hover {
+    cursor: pointer;
+}
+
+.table-user-information > tbody > tr {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.table-user-information > tbody > tr:first-child {
+    border-top: 0;
+}
+
+
+.table-user-information > tbody > tr > td {
+    border-top: 0;
+}
+.toppad
+{
+    margin-top:20px;
+}
+
+.img-circle
+{
+    width: 80px;
+    height: 100px;
+}
+
+.cont-login 
+{
+    margin-left: 30%;
+}
+
+.home-main{
+    background: #5812c5;
+    color:#fff;
+    padding: 13%;
+    text-align: center;
+}
+.blinker{
+    animation: blinker 1.5s linear infinite;
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+.home-main button{
+    background: #fff;
+    color: #5812c5;
+    border-radius: 0;
+    font-weight: 700;
+    width: 16%;
+    height: 50px;
+    top: 4%;
+    margin-top: 3%;
+}
+.home-main button:hover{
+    transition: 1s ease;
+    color:#5812c5;
+    width: 19%;
+}
+.content1-left{
+    padding:9%;
+}
+.content1-right{
+    padding:9%;
+    background:#e4e4e4;
+}
+.home-content2{
+    background: #adb5bd;
+    padding: 1.4%;
+    text-align: center;	
+}
+.home-content2 p{
+    font-size: 18px;
+    line-height: 50px;
+}
+.home-content2 p span{
+    font-weight: 500;
+}

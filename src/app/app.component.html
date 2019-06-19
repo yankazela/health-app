@@ -1,0 +1,42 @@
+<div>
+  <nav id="navbar" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+    <a class="navbar-brand" href="#">Health App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+      <ul class="navbar-nav">
+        <li class="nav-item" *ngIf="currentUrl === '/dashboard' || currentUrl === '/healthpro'">
+          <a class="nav-link" routerLinkActive="active" routerLink="dashboard">Profile</a>
+        </li>
+        <li class="nav-item" *ngIf="currentUrl === '/dashboard' || currentUrl === '/healthpro'">
+          <a class="nav-link" routerLinkActive="active" routerLink="healthpro">My Doctors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="{{currentUrl === '/' || currentUrl === '/login' || currentUrl === '/logout' ? 'login' : 'logout' }}">{{currentUrl === '/' || currentUrl === '/login' || currentUrl === '/logout' ? 'Login' : 'Logout' }}</a>
+        </li>
+      </ul>
+    </div>  
+  </nav>
+  <div *ngIf="currentUrl === '/'">
+    <div class="container-fluid home-main" >
+      <h2>Our Health App <span class="blinker">.</span></h2>
+      <a routerLink="/login"><button class="btn btn-default">Login</button></a>
+    </div>
+    <div class="container-fluid home-content1">
+      <div class="row">
+        <div class="col-md-6 content1-left">
+          <h3>A small angular Web App</h3>
+          <p>This app displays user data after a successful login. These data are fecthed from an ASP.Net API.</p>
+          <!-- <div class="content1-left"></div> -->
+        </div>
+        <div class="col-md-6 content1-right">
+          <p>Enjoy our small app and, please note that you can also update your details.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid home-content2">
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

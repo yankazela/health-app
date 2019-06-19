@@ -1,0 +1,43 @@
+<div class="container" style="margin-left: 20%; margin-top: 5%">
+  <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{credentials.firstname + " " + credentials.lastname}}</h3>
+      </div>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../../assets/images/user-icon.png" class="img-circle img-responsive"> </div>
+            <div class=" col-md-9 col-lg-9 "> 
+              <table class="table table-user-information">
+                <tbody>
+                  <tr>
+                    <td>Member ID:</td>
+                    <td>{{credentials.userId}}</td>
+                  </tr>
+                  <tr>
+                    <td>Date of Birth</td>
+                    <td>{{credentials.dateOfBirth}}</td>
+                  </tr>
+                  <tr>
+                    <td>Home Address</td>
+                    <td>{{credentials.address}}</td>
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <td><a href={{credentials.emailAddress}}>{{credentials.emailAddress}}</a></td>
+                  </tr>
+                  <tr>
+                    <td>Phone Number</td>
+                    <td>{{credentials.contactNumber}}</td>
+                  </tr>
+                </tbody>
+              </table>
+              <button (click)="getDoctorsDetails()" class="btn btn-primary">View your related doctors' details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
