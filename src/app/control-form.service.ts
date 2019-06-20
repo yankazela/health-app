@@ -48,6 +48,10 @@ export class ControlFormService {
     return this.httpRequest.postCredentials('http://localhost:4200/api/userlogin/healthPro', { 'token': token, 'healthProIds': healthProIds })
   }
 
+  putPatientDetails(patient: any) {
+    return this.httpRequest.putDetails('http://localhost:4200/api/userlogin', patient)
+  }
+
   logoutUser(token: string) {
     return this.httpRequest.get('http://localhost:4200/api/userlogin/logout/' + token)
   }

@@ -20,4 +20,8 @@ export class HttpRequestService {
   get(url: string) {
     return this.http.get(url)
   }
+
+  putDetails(url: string, data: any) {
+    return this.http.put(url, data, this.httpOptions)
+  }
 }

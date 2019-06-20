@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
       (error) => {
         console.log('login error:', error.message)
         this.showMessage = true
-        this.loginMessage = 'Invalid credentials'
+        this.loginMessage = 'Network error please try again'
         return
       })
   }

@@ -1,0 +1,51 @@
+<div class="container" style="margin-left: 20%; margin-top: 9%">
+    <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad" >
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{credentials.firstname + " " + credentials.lastname}}</h3>
+        </div>
+          <p *ngIf="!success && message">{{message}}</p>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="../../assets/images/user-icon.png" class="img-circle img-responsive"> </div>
+              <div class=" col-md-9 col-lg-9 "> 
+                <form class="form form-user-information" [formGroup]="editForm" (ngSubmit)="onSubmit()" *ngIf="!success">
+                  <div class="form-element-information">
+                    <label class="label-profile">Username:</label>
+                    <input class="input-profile" type="text" formControlName="Username" />
+                  </div>
+                  <div class="form-element-information">
+                    <label class="label-profile">Firstname:</label>
+                    <input class="input-profile" type="text" formControlName="FirstName" />
+                  </div>
+                  <div class="form-element-information">
+                    <label class="label-profile">Lastname:</label>
+                    <input class="input-profile" type="text" formControlName="LastName" />
+                  </div>
+                  <div class="form-element-information">
+                    <label class="label-profile">Email:</label>
+                    <input class="input-profile" type="text" formControlName="EmailAddress" />
+                  </div>
+                  <div class="form-element-information">
+                    <label class="label-profile">Date of Birth:</label>
+                    <input class="input-profile" type="text" formControlName="DateOfBirth" />
+                  </div>
+                  <div class="form-element-information">
+                    <label class="label-profile">Telephone:</label>
+                    <input class="input-profile" type="text" formControlName="ContactNumber" />
+                  </div>
+                  <br/>
+                  <button class="btn btn-primary" style="margin-left: 30%" type="submit">Update</button>
+                </form>
+                <div  *ngIf="success">
+                  <p>{{message}}</p>
+                  <button class="btn btn-primary" style="margin-left: 30%" (click)="backToDashboard()">Back to Dashboard</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -22,8 +22,9 @@ export class DoctorsDetailsComponent implements OnInit {
     } else if (this.credentials.doctorsDetails.length < 1) {
       this.controlForm.getHealthProDetails(this.credentials.token, this.credentials.healthProIds)
       .subscribe(results => {
-        this.credentials.doctorsDetails = JSON.parse(results.json().replace(/'/g, '"'));
-        ControlFormService.doctorsDetails = this.credentials.doctorsDetails
+        var doctorsDetails = JSON.parse(results.json().replace(/'/g, '"'));
+        this.credentials.doctorsDetails = Array.isArray(doctorsDetails) ? doctorsDetails: []
+        ControlFormService.credentials = this.credentials
       },
       (error) => {
         console.log('error:', error.message)

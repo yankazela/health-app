@@ -37,6 +37,33 @@ body{
 }
 
 
+.form-user-information > div > input, label {
+    border-top: 0;
+}
+
+.form-element-information {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    width: 80%;
+}
+
+.form-user-information > div > input:first-child, label:first-child {
+    border-top: 0;
+}
+
+.input-profile {
+    border: none;
+    margin-left: 10%;
+}
+
+.label-profile {
+    width: 30%;
+    color:dimgrey; 
+}
+
+input :focus {
+    outline: none;
+}
+
 .table-user-information > tbody > tr > td {
     border-top: 0;
 }
