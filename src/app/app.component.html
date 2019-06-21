@@ -6,10 +6,10 @@
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
-        <li class="nav-item" *ngIf="currentUrl === '/dashboard' || currentUrl === '/healthpro'">
+        <li class="nav-item" *ngIf="currentUrl === '/dashboard' || currentUrl === '/healthpro' || currentUrl === '/editprofile'">
           <a class="nav-link" routerLinkActive="active" routerLink="dashboard">Profile</a>
         </li>
-        <li class="nav-item" *ngIf="currentUrl === '/dashboard' || currentUrl === '/healthpro'">
+        <li class="nav-item" *ngIf="currentUrl === '/dashboard' || currentUrl === '/healthpro' || currentUrl === '/editprofile'">
           <a class="nav-link" routerLinkActive="active" routerLink="healthpro">My Doctors</a>
         </li>
         <li class="nav-item">

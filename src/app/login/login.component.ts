@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
           this.router.navigate(['/dashboard'])
         } else {
           this.showMessage = true
-          this.loginMessage = 'Invalid credentials'
+          this.loginMessage = 'We could not log you in due to invalid credentials or a network error please try again'
           return
         }
       },
